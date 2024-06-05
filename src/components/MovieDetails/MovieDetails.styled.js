@@ -3,46 +3,31 @@ import { Link } from 'react-router-dom';
 
 export const MovieDetailsContainer = styled.div`
   padding: 20px;
-  background-color: #f0f0f0;
-
-  h1 {
-    margin-bottom: 20px;
-  }
-
-  p {
-    margin-bottom: 20px;
-  }
-
-  a {
-    display: inline-block;
-    margin-right: 10px;
-    text-decoration: none;
-    color: #000;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  border-radius: 10px;
 `;
 
 export const MovieImage = styled.img`
   width: 200px;
   height: 300px;
   margin-right: 20px;
+  border-radius: 10px;
 `;
 
 export const BackButton = styled(Link)`
   display: inline-block;
   margin-bottom: 20px;
   padding: 10px 20px;
-  background-color: #61dafb;
+  background-color: #007bff;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #21a1f1;
+    background-color: #0056b3;
   }
 `;
 
@@ -53,4 +38,24 @@ export const MovieContent = styled.div`
 
 export const MovieDescription = styled.div`
   max-width: 600px;
+`;
+
+export const LinkButton = styled(Link)`
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+export const MovieTitle = styled.h1`
+  font-size: 2rem;
+  margin-bottom: 20px;
 `;

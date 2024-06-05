@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useParams, Link, Outlet } from 'react-router-dom';
+import { useParams, Outlet } from 'react-router-dom';
 import { fetchMovieDetails } from '../../services/api';
 import {
   MovieDetailsContainer,
@@ -8,6 +8,8 @@ import {
   BackButton,
   MovieContent,
   MovieDescription,
+  LinkButton,
+  MovieTitle,
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
@@ -25,7 +27,7 @@ const MovieDetails = () => {
   return (
     <MovieDetailsContainer>
       <BackButton to="/movies">Go back</BackButton>
-      <h1>{movie.title}</h1>
+      <MovieTitle>{movie.title}</MovieTitle>
       <MovieContent>
         <MovieImage
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -34,8 +36,8 @@ const MovieDetails = () => {
         <MovieDescription>
           <p>{movie.overview}</p>
           <div>
-            <Link to="cast">Cast</Link>
-            <Link to="reviews">Reviews</Link>
+            <LinkButton to="cast">Cast</LinkButton>
+            <LinkButton to="reviews">Reviews</LinkButton>
           </div>
         </MovieDescription>
       </MovieContent>

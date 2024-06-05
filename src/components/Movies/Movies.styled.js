@@ -15,12 +15,12 @@ export const MovieItem = styled.li`
 
   a {
     text-decoration: none;
-    color: #000;
+    color: #007bff;
     font-size: 1.1rem;
     transition: color 0.3s;
 
     &:hover {
-      color: #61dafb;
+      color: #0056b3;
     }
   }
 `;

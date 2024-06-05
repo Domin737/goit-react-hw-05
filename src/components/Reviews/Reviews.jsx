@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from '../../services/api';
-import { ReviewsContainer } from './Reviews.styled';
+import {
+  ReviewContainer,
+  ReviewItem,
+  NoReviewsMessage,
+} from './Reviews.styled';
 
 const Reviews = () => {
   const { movieId } = useParams();
@@ -13,17 +17,21 @@ const Reviews = () => {
   }, [movieId]);
 
   return (
-    <ReviewsContainer>
+    <ReviewContainer>
       <h2>Reviews</h2>
-      <ul>
-        {reviews.map(review => (
-          <li key={review.id}>
+      {reviews.length > 0 ? (
+        reviews.map(review => (
+          <ReviewItem key={review.id}>
             <h3>{review.author}</h3>
             <p>{review.content}</p>
-          </li>
-        ))}
-      </ul>
-    </ReviewsContainer>
+          </ReviewItem>
+        ))
+      ) : (
+        <NoReviewsMessage>
+          No reviews available for this movie.
+        </NoReviewsMessage>
+      )}
+    </ReviewContainer>
   );
 };
 
