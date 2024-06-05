@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { searchMovies } from '../../services/api';
-import { MoviesContainer } from './Movies.styled';
+import { MoviesContainer, MovieItem } from './Movies.styled';
 
 const Movies = () => {
   const [query, setQuery] = useState('');
@@ -25,21 +25,13 @@ const Movies = () => {
       </form>
       <ul>
         {movies.map(movie => (
-          <li key={movie.id}>{movie.title}</li>
+          <MovieItem key={movie.id}>
+            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+          </MovieItem>
         ))}
       </ul>
     </MoviesContainer>
   );
-};
-
-Movies.propTypes = {
-  query: PropTypes.string.isRequired,
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-    })
-  ),
 };
 
 export default Movies;
