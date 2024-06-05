@@ -7,7 +7,11 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetchTrendingMovies().then(data => setMovies(data.results));
+    const getTrendingMovies = async () => {
+      const results = await fetchTrendingMovies();
+      setMovies(results);
+    };
+    getTrendingMovies();
   }, []);
 
   return (

@@ -1,8 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
   Routes,
+  Route,
   Navigate,
 } from 'react-router-dom';
 import { NavBar, NavLinkStyled } from './App.styled';
