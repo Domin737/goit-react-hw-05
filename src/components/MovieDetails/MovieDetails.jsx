@@ -2,7 +2,13 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useParams, Link, Outlet } from 'react-router-dom';
 import { fetchMovieDetails } from '../../services/api';
-import { MovieDetailsContainer, MovieImage } from './MovieDetails.styled';
+import {
+  MovieDetailsContainer,
+  MovieImage,
+  BackButton,
+  MovieContent,
+  MovieDescription,
+} from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -18,15 +24,21 @@ const MovieDetails = () => {
 
   return (
     <MovieDetailsContainer>
-      <Link to="/movies">Go back</Link>
+      <BackButton to="/movies">Go back</BackButton>
       <h1>{movie.title}</h1>
-      <MovieImage
-        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-        alt={movie.title}
-      />
-      <p>{movie.overview}</p>
-      <Link to="cast">Cast</Link>
-      <Link to="reviews">Reviews</Link>
+      <MovieContent>
+        <MovieImage
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          alt={movie.title}
+        />
+        <MovieDescription>
+          <p>{movie.overview}</p>
+          <div>
+            <Link to="cast">Cast</Link>
+            <Link to="reviews">Reviews</Link>
+          </div>
+        </MovieDescription>
+      </MovieContent>
       <Outlet />
     </MovieDetailsContainer>
   );

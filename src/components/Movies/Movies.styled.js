@@ -12,4 +12,15 @@ export const MoviesContainer = styled.div`
 export const MovieItem = styled.li`
   list-style: none;
   margin-bottom: 10px;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #61dafb;
+    }
+  }
 `;
