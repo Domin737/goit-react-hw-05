@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { useParams, Link, Outlet } from 'react-router-dom';
 import { fetchMovieDetails } from '../../services/api';
 import { MovieDetailsContainer } from './MovieDetails.styled';
-import PropTypes from 'prop-types';
-
-MovieDetails.propTypes = {
-  movie: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    overview: PropTypes.string.isRequired,
-  }),
-};
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -32,6 +25,13 @@ const MovieDetails = () => {
       <Outlet />
     </MovieDetailsContainer>
   );
+};
+
+MovieDetails.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    overview: PropTypes.string.isRequired,
+  }),
 };
 
 export default MovieDetails;

@@ -1,16 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { fetchTrendingMovies } from '../../services/api';
 import { HomeContainer } from './Home.styled';
-import PropTypes from 'prop-types';
-
-Home.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-    })
-  ),
-};
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -29,6 +20,15 @@ const Home = () => {
       </ul>
     </HomeContainer>
   );
+};
+
+Home.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default Home;
