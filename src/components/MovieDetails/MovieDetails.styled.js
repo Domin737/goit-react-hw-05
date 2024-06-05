@@ -23,3 +23,9 @@ export const MovieDetailsContainer = styled.div`
     }
   }
 `;
+
+export const MovieImage = styled.img`
+  width: 200px;
+  height: 300px;
+  margin-right: 20px;
+`;

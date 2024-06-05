@@ -7,13 +7,15 @@ export const CastContainer = styled.div`
   h2 {
     margin-bottom: 20px;
   }
+`;
 
-  ul {
-    list-style: none;
-    padding: 0;
+export const CastItem = styled.li`
+  list-style: none;
+  margin-bottom: 20px;
+`;
 
-    li {
-      margin-bottom: 10px;
-    }
-  }
+export const CastImage = styled.img`
+  width: 50px;
+  height: 75px;
+  margin-right: 10px;
 `;
