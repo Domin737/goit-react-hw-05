@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import { searchMovies } from '../../services/api';
 import { MoviesContainer } from './Movies.styled';
+import PropTypes from 'prop-types';
+
+Movies.propTypes = {
+  query: PropTypes.string.isRequired,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ),
+};
 
 const Movies = () => {
   const [query, setQuery] = useState('');
