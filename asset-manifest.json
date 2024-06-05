@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/goit-react-hw-05/static/js/main.865a7a52.js",
-    "static/js/862.330b3815.chunk.js": "/goit-react-hw-05/static/js/862.330b3815.chunk.js",
-    "static/js/313.8e3f177e.chunk.js": "/goit-react-hw-05/static/js/313.8e3f177e.chunk.js",
-    "static/js/375.237fd0c5.chunk.js": "/goit-react-hw-05/static/js/375.237fd0c5.chunk.js",
+    "main.js": "/goit-react-hw-05/static/js/main.8177f5be.js",
+    "static/js/862.e9585cdd.chunk.js": "/goit-react-hw-05/static/js/862.e9585cdd.chunk.js",
+    "static/js/313.43a97a4c.chunk.js": "/goit-react-hw-05/static/js/313.43a97a4c.chunk.js",
+    "static/js/375.3555bc48.chunk.js": "/goit-react-hw-05/static/js/375.3555bc48.chunk.js",
     "static/js/387.39ae3d3a.chunk.js": "/goit-react-hw-05/static/js/387.39ae3d3a.chunk.js",
-    "static/js/779.cc2c9edc.chunk.js": "/goit-react-hw-05/static/js/779.cc2c9edc.chunk.js",
+    "static/js/779.c62111cc.chunk.js": "/goit-react-hw-05/static/js/779.c62111cc.chunk.js",
     "index.html": "/goit-react-hw-05/index.html",
-    "main.865a7a52.js.map": "/goit-react-hw-05/static/js/main.865a7a52.js.map",
-    "862.330b3815.chunk.js.map": "/goit-react-hw-05/static/js/862.330b3815.chunk.js.map",
-    "313.8e3f177e.chunk.js.map": "/goit-react-hw-05/static/js/313.8e3f177e.chunk.js.map",
-    "375.237fd0c5.chunk.js.map": "/goit-react-hw-05/static/js/375.237fd0c5.chunk.js.map",
+    "main.8177f5be.js.map": "/goit-react-hw-05/static/js/main.8177f5be.js.map",
+    "862.e9585cdd.chunk.js.map": "/goit-react-hw-05/static/js/862.e9585cdd.chunk.js.map",
+    "313.43a97a4c.chunk.js.map": "/goit-react-hw-05/static/js/313.43a97a4c.chunk.js.map",
+    "375.3555bc48.chunk.js.map": "/goit-react-hw-05/static/js/375.3555bc48.chunk.js.map",
     "387.39ae3d3a.chunk.js.map": "/goit-react-hw-05/static/js/387.39ae3d3a.chunk.js.map",
-    "779.cc2c9edc.chunk.js.map": "/goit-react-hw-05/static/js/779.cc2c9edc.chunk.js.map"
+    "779.c62111cc.chunk.js.map": "/goit-react-hw-05/static/js/779.c62111cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.865a7a52.js"
+    "static/js/main.8177f5be.js"
   ]
 }
