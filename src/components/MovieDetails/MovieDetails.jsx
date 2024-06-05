@@ -18,6 +18,7 @@ const MovieDetails = () => {
 
   return (
     <MovieDetailsContainer>
+      <Link to="/movies">Go back</Link>
       <h1>{movie.title}</h1>
       <p>{movie.overview}</p>
       <Link to="cast">Cast</Link>
