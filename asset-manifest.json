@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/goit-react-hw-05/static/js/main.e44e6295.js",
-    "static/js/862.15c6d59b.chunk.js": "/goit-react-hw-05/static/js/862.15c6d59b.chunk.js",
+    "main.js": "/goit-react-hw-05/static/js/main.7235104d.js",
+    "static/js/862.855f3a91.chunk.js": "/goit-react-hw-05/static/js/862.855f3a91.chunk.js",
     "static/js/313.90706e9b.chunk.js": "/goit-react-hw-05/static/js/313.90706e9b.chunk.js",
-    "static/js/375.c71bb4e8.chunk.js": "/goit-react-hw-05/static/js/375.c71bb4e8.chunk.js",
-    "static/js/387.666b3b07.chunk.js": "/goit-react-hw-05/static/js/387.666b3b07.chunk.js",
+    "static/js/375.8bbee82c.chunk.js": "/goit-react-hw-05/static/js/375.8bbee82c.chunk.js",
+    "static/js/387.9f72288f.chunk.js": "/goit-react-hw-05/static/js/387.9f72288f.chunk.js",
     "static/js/779.5c44d691.chunk.js": "/goit-react-hw-05/static/js/779.5c44d691.chunk.js",
     "static/js/519.4df557dc.chunk.js": "/goit-react-hw-05/static/js/519.4df557dc.chunk.js",
     "index.html": "/goit-react-hw-05/index.html",
-    "main.e44e6295.js.map": "/goit-react-hw-05/static/js/main.e44e6295.js.map",
-    "862.15c6d59b.chunk.js.map": "/goit-react-hw-05/static/js/862.15c6d59b.chunk.js.map",
+    "main.7235104d.js.map": "/goit-react-hw-05/static/js/main.7235104d.js.map",
+    "862.855f3a91.chunk.js.map": "/goit-react-hw-05/static/js/862.855f3a91.chunk.js.map",
     "313.90706e9b.chunk.js.map": "/goit-react-hw-05/static/js/313.90706e9b.chunk.js.map",
-    "375.c71bb4e8.chunk.js.map": "/goit-react-hw-05/static/js/375.c71bb4e8.chunk.js.map",
-    "387.666b3b07.chunk.js.map": "/goit-react-hw-05/static/js/387.666b3b07.chunk.js.map",
+    "375.8bbee82c.chunk.js.map": "/goit-react-hw-05/static/js/375.8bbee82c.chunk.js.map",
+    "387.9f72288f.chunk.js.map": "/goit-react-hw-05/static/js/387.9f72288f.chunk.js.map",
     "779.5c44d691.chunk.js.map": "/goit-react-hw-05/static/js/779.5c44d691.chunk.js.map",
     "519.4df557dc.chunk.js.map": "/goit-react-hw-05/static/js/519.4df557dc.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e44e6295.js"
+    "static/js/main.7235104d.js"
   ]
 }
