@@ -4,8 +4,8 @@ import {
   Route,
   Routes,
   Navigate,
-  Link,
 } from 'react-router-dom';
+import { NavBar, NavLinkStyled } from './App.styled';
 
 const Home = lazy(() => import('./components/Home/Home'));
 const Movies = lazy(() => import('./components/Movies/Movies'));
@@ -18,10 +18,10 @@ const Reviews = lazy(() => import('./components/Reviews/Reviews'));
 function App() {
   return (
     <Router>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/movies">Movies</Link>
-      </nav>
+      <NavBar>
+        <NavLinkStyled to="/">Home</NavLinkStyled>
+        <NavLinkStyled to="/movies">Movies</NavLinkStyled>
+      </NavBar>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Home />} />
