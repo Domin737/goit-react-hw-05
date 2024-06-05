@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from '../../services/api';
 import {
@@ -13,7 +12,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetchMovieReviews(movieId).then(data => setReviews(data.results));
+    fetchMovieReviews(movieId).then(data => setReviews(data));
   }, [movieId]);
 
   return (
@@ -33,16 +32,6 @@ const Reviews = () => {
       )}
     </ReviewContainer>
   );
-};
-
-Reviews.propTypes = {
-  reviews: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      content: PropTypes.string.isRequired,
-    })
-  ),
 };
 
 export default Reviews;

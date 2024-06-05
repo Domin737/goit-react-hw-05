@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { fetchMovieCredits } from '../../services/api';
 import { CastContainer, CastItem, NoCastMessage } from './Cast.styled';
@@ -9,7 +8,7 @@ const Cast = () => {
   const [cast, setCast] = useState([]);
 
   useEffect(() => {
-    fetchMovieCredits(movieId).then(data => setCast(data.cast));
+    fetchMovieCredits(movieId).then(data => setCast(data));
   }, [movieId]);
 
   return (
@@ -39,17 +38,6 @@ const Cast = () => {
       )}
     </CastContainer>
   );
-};
-
-Cast.propTypes = {
-  cast: PropTypes.arrayOf(
-    PropTypes.shape({
-      cast_id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      character: PropTypes.string.isRequired,
-      profile_path: PropTypes.string,
-    })
-  ),
 };
 
 export default Cast;
