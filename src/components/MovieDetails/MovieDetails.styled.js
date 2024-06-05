@@ -39,11 +39,17 @@ export const MovieDescription = styled.div`
 
 export const MovieTitle = styled.h1`
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
 export const MovieInfo = styled.div`
   margin-bottom: 20px;
+`;
+
+export const Section = styled.div`
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
 `;
 
 export const MovieScore = styled.p`

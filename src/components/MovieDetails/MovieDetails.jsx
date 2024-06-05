@@ -14,6 +14,7 @@ import {
   MovieScore,
   MovieOverview,
   MovieGenres,
+  Section,
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
@@ -39,15 +40,21 @@ const MovieDetails = () => {
         <MovieDescription>
           <MovieTitle>{movie.title}</MovieTitle>
           <MovieInfo>
-            <MovieScore>User Score: {movie.vote_average * 10}%</MovieScore>
-            <MovieOverview>
-              <h3>Overview</h3>
-              <p>{movie.overview}</p>
-            </MovieOverview>
-            <MovieGenres>
-              <h3>Genres</h3>
-              <p>{movie.genres.map(genre => genre.name).join(', ')}</p>
-            </MovieGenres>
+            <Section>
+              <MovieScore>User Score: {movie.vote_average * 10}%</MovieScore>
+            </Section>
+            <Section>
+              <MovieOverview>
+                <h3>Overview</h3>
+                <p>{movie.overview}</p>
+              </MovieOverview>
+            </Section>
+            <Section>
+              <MovieGenres>
+                <h3>Genres</h3>
+                <p>{movie.genres.map(genre => genre.name).join(', ')}</p>
+              </MovieGenres>
+            </Section>
           </MovieInfo>
           <div>
             <LinkButton to="cast">Cast</LinkButton>
