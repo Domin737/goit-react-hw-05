@@ -1,35 +1,51 @@
 import styled from 'styled-components';
 
-export const SearchBar = styled.form`
+export const Container = styled.div`
+  padding: 20px;
+`;
+
+export const SearchForm = styled.form`
   display: flex;
-  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 `;
 
 export const SearchInput = styled.input`
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #007bff;
-  border-radius: 4px 0 0 4px;
-  outline: none;
   width: 300px;
-
-  &:focus {
-    border-color: #0056b3;
-  }
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 16px;
 `;
 
 export const SearchButton = styled.button`
   padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
+  background-color: #1e90ff;
   color: white;
-  border: 2px solid #007bff;
-  border-radius: 0 4px 4px 0;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-
+  font-size: 16px;
   &:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #1c86ee;
+  }
+`;
+
+export const MoviesList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+export const MovieItem = styled.li`
+  margin-bottom: 10px;
+`;
+
+export const MovieLink = styled.a`
+  text-decoration: none;
+  color: #1e90ff;
+  font-size: 18px;
+  &:hover {
+    text-decoration: underline;
   }
 `;

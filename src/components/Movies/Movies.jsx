@@ -1,30 +1,52 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { SearchBar, SearchButton, SearchInput } from './Movies.styled';
+import {
+  Container,
+  SearchForm,
+  SearchInput,
+  SearchButton,
+  MoviesList,
+  MovieItem,
+  MovieLink,
+} from './Movies.styled';
+import { searchMovies } from '../../services/api';
 
 const Movies = () => {
   const [query, setQuery] = useState('');
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [movies, setMovies] = useState([]);
 
-  const handleSearch = e => {
+  const handleChange = e => {
+    setQuery(e.target.value);
+  };
+
+  const handleSubmit = async e => {
     e.preventDefault();
-    navigate(`${location.pathname}?query=${query}`);
+    if (query.trim() === '') {
+      return;
+    }
+    const results = await searchMovies(query);
+    setMovies(results);
   };
 
   return (
-    <div>
-      <h1>Search Movies</h1>
-      <SearchBar onSubmit={handleSearch}>
+    <Container>
+      <h2>Search Movies</h2>
+      <SearchForm onSubmit={handleSubmit}>
         <SearchInput
           type="text"
           value={query}
-          onChange={e => setQuery(e.target.value)}
+          onChange={handleChange}
           placeholder="Search for movies..."
         />
         <SearchButton type="submit">Search</SearchButton>
-      </SearchBar>
-    </div>
+      </SearchForm>
+      <MoviesList>
+        {movies.map(movie => (
+          <MovieItem key={movie.id}>
+            <MovieLink href={`/movies/${movie.id}`}>{movie.title}</MovieLink>
+          </MovieItem>
+        ))}
+      </MoviesList>
+    </Container>
   );
 };
 
