@@ -10,6 +10,10 @@ import {
   MovieDescription,
   LinkButton,
   MovieTitle,
+  MovieInfo,
+  MovieScore,
+  MovieOverview,
+  MovieGenres,
 } from './MovieDetails.styled';
 
 const MovieDetails = () => {
@@ -27,14 +31,24 @@ const MovieDetails = () => {
   return (
     <MovieDetailsContainer>
       <BackButton to="/movies">Go back</BackButton>
-      <MovieTitle>{movie.title}</MovieTitle>
       <MovieContent>
         <MovieImage
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
         />
         <MovieDescription>
-          <p>{movie.overview}</p>
+          <MovieTitle>{movie.title}</MovieTitle>
+          <MovieInfo>
+            <MovieScore>User Score: {movie.vote_average * 10}%</MovieScore>
+            <MovieOverview>
+              <h3>Overview</h3>
+              <p>{movie.overview}</p>
+            </MovieOverview>
+            <MovieGenres>
+              <h3>Genres</h3>
+              <p>{movie.genres.map(genre => genre.name).join(', ')}</p>
+            </MovieGenres>
+          </MovieInfo>
           <div>
             <LinkButton to="cast">Cast</LinkButton>
             <LinkButton to="reviews">Reviews</LinkButton>
@@ -51,6 +65,13 @@ MovieDetails.propTypes = {
     title: PropTypes.string.isRequired,
     overview: PropTypes.string.isRequired,
     poster_path: PropTypes.string.isRequired,
+    vote_average: PropTypes.number.isRequired,
+    genres: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+      })
+    ).isRequired,
   }),
 };
 
