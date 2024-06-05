@@ -1,36 +1,30 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { searchMovies } from '../../services/api';
-import { MoviesContainer, MovieItem } from './Movies.styled';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { SearchBar, SearchButton, SearchInput } from './Movies.styled';
 
 const Movies = () => {
   const [query, setQuery] = useState('');
-  const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleSearch = event => {
-    event.preventDefault();
-    searchMovies(query).then(data => setMovies(data.results));
+  const handleSearch = e => {
+    e.preventDefault();
+    navigate(`${location.pathname}?query=${query}`);
   };
 
   return (
-    <MoviesContainer>
+    <div>
       <h1>Search Movies</h1>
-      <form onSubmit={handleSearch}>
-        <input
+      <SearchBar onSubmit={handleSearch}>
+        <SearchInput
           type="text"
           value={query}
           onChange={e => setQuery(e.target.value)}
+          placeholder="Search for movies..."
         />
-        <button type="submit">Search</button>
-      </form>
-      <ul>
-        {movies.map(movie => (
-          <MovieItem key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-          </MovieItem>
-        ))}
-      </ul>
-    </MoviesContainer>
+        <SearchButton type="submit">Search</SearchButton>
+      </SearchBar>
+    </div>
   );
 };
 
