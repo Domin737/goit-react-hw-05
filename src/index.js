@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './App';
-import GlobalStyle from './GlobalStyle';
+import './index.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <GlobalStyle />
+  <HashRouter>
     <App />
-  </React.StrictMode>,
+  </HashRouter>,
   document.getElementById('root')
 );
