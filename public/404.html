@@ -44,6 +44,11 @@
           (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
           l.hash
       );
+      window.location.replace(
+        window.location.pathname.replace(/\/$/, '') +
+          '/#/' +
+          window.location.pathname.slice(1)
+      );
     </script>
   </head>
   <body></body>
