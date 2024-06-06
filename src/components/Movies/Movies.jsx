@@ -8,6 +8,7 @@ import {
   MovieItem,
   MovieLink,
 } from './Movies.styled';
+import { Link } from 'react-router-dom';
 import { searchMovies } from '../../services/api';
 
 const Movies = () => {
@@ -42,7 +43,9 @@ const Movies = () => {
       <MoviesList>
         {movies.map(movie => (
           <MovieItem key={movie.id}>
-            <MovieLink href={`/movies/${movie.id}`}>{movie.title}</MovieLink>
+            <MovieLink as={Link} to={`/movies/${movie.id}`}>
+              {movie.title}
+            </MovieLink>
           </MovieItem>
         ))}
       </MoviesList>

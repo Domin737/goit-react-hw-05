@@ -1,10 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { NavBar, NavLinkStyled } from './App.styled';
 
 const Home = lazy(() => import('./components/Home/Home'));
@@ -17,7 +12,7 @@ const Reviews = lazy(() => import('./components/Reviews/Reviews'));
 
 function App() {
   return (
-    <Router>
+    <>
       <NavBar>
         <NavLinkStyled to="/">Home</NavLinkStyled>
         <NavLinkStyled to="/movies">Movies</NavLinkStyled>
@@ -33,7 +28,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>
-    </Router>
+    </>
   );
 }
 
